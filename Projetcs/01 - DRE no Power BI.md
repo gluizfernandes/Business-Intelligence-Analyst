@@ -1,4 +1,6 @@
-## FÓRMULAS DAX UTILIZADAS ## 
+## FÓRMULAS DAX ## 
+Fórmulas utilizadas no projeto abaixo:
+https://www.linkedin.com/pulse/demonstra%C3%A7%C3%A3o-do-resultado-exerc%C3%ADcio-dre-power-bi-george-fernandes/
 ### 1.0 - CRIAÇÃO DA TABELA dCALENDARIO ###
 Levei em consideração as datas da tabela <b>fRealizado</b> para criar a dCalendario, pois nessa tabela contém apenas as datas que tiveram transações, tornando possivel fazer a comparação do Orçado x Realizado, e todas as vezes que ocorrer uma nova transação, a tabela dCalendario acrescentará as novas datas automaticamente.
 ```py
