@@ -4,11 +4,12 @@
 * Não é uma ferramenta;
 * Coletar e organizar dados para facilitar a transoformação dos dados em informações; 
 * Analisar esses dados e transformar informações que possam ser visualizadas;
-* Compartilhar essas informações e monitorar a evolução dos KPIs.                                      
+* Compartilhar essas informações e monitorar a evolução dos KPIs.          
+                            
 <i>"Entregar a informação correta, para a pessoa correta, no tempo correto."</i>
 
 ## 2.0 - Etapas 
-### 2.1 - Fonte de Dados
+### 2.1 - (ETL) Fonte de Dados | Extração dos Dados
 Identificação das fontes de dados. (Arquivos locais em pastas, arquivos em nuvens e Banco de dados)
 * SQL Server
 * MySQL
@@ -17,16 +18,20 @@ Identificação das fontes de dados. (Arquivos locais em pastas, arquivos em nuv
 * XLS
 * etc
 
-### 2.2 - ETL
-Processo de <b> Extração, Transformação e Carga(Load)</b>.
+### 2.2 - (ETL) Estrturação | Modelagem de Dados
+Processo onde os dados são estruturados, organizados e relacionados em diversas tabelas(fato e dimensão) de uma forma lógica, tornando possivel transformar esses dados em informações coerentes e fazer as devidas ligações entre tabelas, garantindo uma boa perfomance.
 
-### 2.3 - Modelagem de Dados
-Processo onde os dados são estruturados e organizados em diversas tabelas(fato e dimensão) de uma forma lógica, tornando possivel transformar esses dados em informações coerentes e fazer as devidas ligações entre tabelas.
+<i>Cada coluna deve falar sobre um determinado assunto, a modelagem de dados serve para garantir que isso aconteça.</i>
 
-#### Star Schema ####
+#### Data Quality | Validação dos Dados ####
+Manter a qualidade e veracidade dos dados, garantino que estejam prontos para serem analisados corretamente.
+
+<i>Pior do que não ter dados, é ter dados errados. </i>
+
+#### Star Schema #### - Mais Otimizado, modelo mais utilizado.
 Diversas <b>tabelas dimensões</b> ligadas a apenas uma <b>tabela fato</b>
 
-#### Snowflake Schema ####
+#### Snowflake Schema #### - Menos otimizado, utizado em determinados casos.
 As <b>tabelas dimensões</b> são ligadas a uma <b>tabela fato</b> e em outras <b>tabelas dimensões</b>, formando um tipo de hierarquia.
 
 #### Tabela Fato ####
@@ -45,10 +50,22 @@ Ideal para quando a inteção é realizar análises temporais.
 ####  OLAP #### 
 Processamento analítico online
 
+### 2.3 - Métricas | Cálculos
+<b> Onde é traduzido a regra de negócio</b>, e é identificado o problema e sua solução.
+
 ### 2.4 - Visualização
 Processo responsável pela criação dos:
 * Relatórios
 * Dashboards
 
-### 2.5 - Compartilhamento
-Processo de <b>compartilhamento do conteúdo</b> para os responsáveis por tomar decisões e criar estratégias.
+#### Storytelling ####
+
+#### Data Viz ####
+
+#### UX/UI ####
+Levar em consideração a melhor experiência do usuário e facilidade/acessibilidade ao utilizar o dashboard.
+
+### 2.5 - Distribuição | Compartilhamento
+
+### 2.6 - Automatização
+Automatizar alguns do processos anteriores para que não seja necessários realizar novamente manualmente.
