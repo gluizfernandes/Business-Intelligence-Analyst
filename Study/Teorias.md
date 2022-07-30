@@ -28,21 +28,23 @@ Manter a qualidade e veracidade dos dados, garantino que estejam prontos para se
 
 <i>Pior do que não ter dados, é ter dados errados. </i>
 
-#### Star Schema #### - Mais Otimizado, modelo mais utilizado.
+#### Star Schema - Mais Otimizado, modelo mais utilizado.
 Diversas <b>tabelas dimensões</b> ligadas a apenas uma <b>tabela fato</b>
 
-#### Snowflake Schema #### - Menos otimizado, utizado em determinados casos.
+#### Snowflake Schema - Menos otimizado, utizado em determinados casos.
 As <b>tabelas dimensões</b> são ligadas a uma <b>tabela fato</b> e em outras <b>tabelas dimensões</b>, formando um tipo de hierarquia.
 
 #### Tabela Fato ####
 * Tabela que apresenta os dados, valores e estatísticas principais que serão transformados em informações.
 * Contém uma ou mais colunas chaves <b> relacionadando a tabela dimensão </b> e colunas de medidas numéricas. 
 * <b> Valores utilizados como chave aparecem diversas vezes </b>
+* Não contém descrições
 
 #### Tabela Dimensão ####
 * Tabela com a funcionalidade de fornecer os dados que na maioria das vezes são transformados em filtros, que segmenta os dados para uma melhor análise.
 * Contém uma ou mais colunas chaves, que atuam como uma referência exclusiva, e colunas descritivas.
 * <b> Valores utilizados como chave são únicos </b>
+* As descrição ficam na tabela dimensão
 
 #### Tabela Calendário(Dimensão) ####
 Ideal para quando a inteção é realizar análises temporais.
