@@ -49,8 +49,8 @@ As <b>tabelas dimensões</b> são ligadas a uma <b>tabela fato</b> e em outras <
 #### Tabela Calendário(Dimensão) ####
 Ideal para quando a inteção é realizar análises temporais.
 
-####  OLAP #### 
-Processamento analítico online
+####  OLAP - Processamento analítico online
+
 
 ### 2.3 - Métricas | Cálculos
 <b> Onde é traduzido a regra de negócio</b>, e é identificado o problema e sua solução.
@@ -71,3 +71,34 @@ Levar em consideração a melhor experiência do usuário e facilidade/acessibil
 
 ### 2.6 - Automatização
 Automatizar alguns do processos anteriores para que não seja necessários realizar novamente manualmente.
+
+## 3.0 - Áreas de Aplicação
+<b> Financeiro </b>
+* Margem de Contribuição
+* Fluxo de Caixa
+
+<b> Logística </b>
+* Monitoramento de Ordem
+* Nível de Serviço
+
+<b> Estoque </b>
+* Custo de Inventário
+* Giro de Estoque
+
+<b> RH </b>
+* Turnover
+* Taxa de absenteismo
+
+<b> Processos </b>
+* Índices de qualidade
+* Leade Time
+* OEE
+
+<b> Vendas </b>
+* Total de Vendas
+* Quantidade de Vendas
+* Total de Custo
+
+
+
+
