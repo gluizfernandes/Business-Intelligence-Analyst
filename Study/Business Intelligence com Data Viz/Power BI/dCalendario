@@ -1,0 +1,38 @@
+dCalendario
+let
+
+    DataMin = List.Min(ft_Funcionarios[Data Admissão]),
+    DataMax = List.Max(ft_Funcionarios[Data Afastamento]),
+    AnoMin = Date.Year(DataMin),
+    AnoMax = Date.Year(DataMax),
+    DataInicial = #date(AnoMin, 1, 1),
+    DataFinal = #date(AnoMax, 12, 31),
+    Duracao = Duration.Days(DataFinal - DataInicial) + 1,
+    Fonte = List.Dates(DataInicial, Duracao, #duration(1, 0, 0, 0)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"Convertido para Tabela",{{"Column1", "Data"}}),
+    InsereAno = Table.AddColumn(#"Colunas Renomeadas", "Ano", each Date.Year([Data])),
+    InsereTrimestre = Table.AddColumn(InsereAno, "Trimestre", each Date.QuarterOfYear([Data]), type number),
+    InsereMesNo = Table.AddColumn(InsereTrimestre, "MesNo", each Date.Month([Data]), type number),
+    InsereDia = Table.AddColumn(InsereMesNo, "Dia", each Date.Day([Data]), type number),
+    InsereAnoMesDia = Table.AddColumn(InsereDia, "AnoMesDia", each [Ano] * 10000 + [MesNo] * 100 + [Dia], type number),
+    InsereMes = Table.AddColumn(InsereAnoMesDia, "Mês", each Date.ToText([Data], "MMMM"), type text),
+    InsereMesAno = Table.AddColumn(InsereMes, "Mês/Ano", each (try(Text.Range([Mês],0,3)) otherwise [Mês]) & "/" & Number.ToText([Ano]), type text),
+    InsereTrimestreAno = Table.AddColumn(InsereMesAno, "Trimestre/Ano", each "T" & Number.ToText([Trimestre]) & "/" & Number.ToText([Ano]), type text),
+    InsereDiaSemana = Table.AddColumn(InsereTrimestreAno, "Dia da Semana", each Date.DayOfWeek([Data]), Int64.Type),
+    InsereNomeDia = Table.AddColumn(InsereDiaSemana, "Nome do Dia", each Date.ToText([Data], "dddd"), type text),
+    InsereSemanaDoAno= Table.AddColumn(InsereNomeDia, "Semana do Ano", each Date.WeekOfYear([Data]), type number),
+    InsereSemanaAno = Table.AddColumn(InsereSemanaDoAno, "Semana/Ano", each "S" & Text.From([Semana do Ano]) & "/" & Text.From([Ano]), type text ),
+    InsereAnoSemana = Table.AddColumn(InsereSemanaAno, "AnoSemana", each [Ano] * 100 + [Semana do Ano], type number),
+    InsereAnoMes = Table.AddColumn(InsereAnoSemana , "AnoMes", each [Ano] * 100 + [MesNo], type number),
+    InsereAnoTrimestre = Table.AddColumn(InsereAnoMes, "AnoTrimestre", each [Ano] * 100 + [Trimestre], type number),
+
+    
+
+    InsereFlagDiaUtil = Table.AddColumn(InsereAnoTrimestre, "Dia Útil", each if [Dia da Semana] = 5 then false else if [Dia da Semana] = 6 then false else true, type logical),
+    #"Tipo Alterado" = Table.TransformColumnTypes(InsereFlagDiaUtil,{{"Data", type date}, {"Ano", Int64.Type}, {"Trimestre", Int64.Type}, {"MesNo", Int64.Type}, {"Dia", Int64.Type}, {"AnoMesDia", Int64.Type}, {"Semana do Ano", Int64.Type}, {"AnoSemana", Int64.Type}, {"AnoTrimestre", Int64.Type}, {"AnoMes", Int64.Type}}),
+    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "MesAbreviado", each Text.Range([Mês],0,3)),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"MesAbreviado", type text}}),
+    #"Colocar Cada Palavra Em Maiúscula" = Table.TransformColumns(#"Tipo Alterado1",{{"MesAbreviado", Text.Proper, type text}})
+in
+    #"Colocar Cada Palavra Em Maiúscula"
