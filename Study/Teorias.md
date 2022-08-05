@@ -23,6 +23,26 @@ Processo onde os dados são estruturados, organizados e relacionados em diversas
 
 <i>Cada coluna deve falar sobre um determinado assunto, a modelagem de dados serve para garantir que isso aconteça.</i>
 
+## O que é o Modelo de Dados ? ##
+Estrutura Lógica com <b> tabelas relacionados </b> que representa os processos de negócios.
+
+### Tipos de Modelagem
+<b>Dimensional </b> - Power BI
+* Usado em:
+Repositório de dados (DW) ou modelos do PBI
+* Tipo de Sistemas
+Análiticas - OLAP
+* Nível de Organização
+Tático/Estratégico
+* Tipo de Modelagem
+Desnormalizado
+* Conceito Chave
+<b> Fato e Dimensão </b>
+* Foco
+
+* Ao realizar consultas
+
+
 #### Data Quality | Validação dos Dados ####
 Manter a qualidade e veracidade dos dados, garantino que estejam prontos para serem analisados corretamente.
 
