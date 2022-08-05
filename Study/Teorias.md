@@ -28,20 +28,22 @@ Estrutura Lógica com <b> tabelas relacionados </b> que representa os processos 
 
 ### Tipos de Modelagem
 <b>Dimensional </b> - Power BI
-* Usado em:
-Repositório de dados (DW) ou modelos do PBI
-* Tipo de Sistemas
-Análiticas - OLAP
-* Nível de Organização
-Tático/Estratégico
-* Tipo de Modelagem
-Desnormalizado
-* Conceito Chave
-<b> Fato e Dimensão </b>
-* Foco
+* <b> Usado em </b>: Repositório de dados (DW) ou modelos do PBI
+* <b> Tipo de Sistemas </b>: Análiticas - OLAP
+* <b> Nível de Organização </b>: Tático/Estratégico
+* <b> Tipo de Modelagem </b>: Desnormalizado
+* <b> Conceito Chave </b>: <b> Fato e Dimensão </b>
+* <b> Foco </b>: Consultiva rápida de dados
+* <b> Ao realizar consultas </b>: Alto Desempenho
 
-* Ao realizar consultas
-
+<b>Relacional </b>
+* <b> Usado em </b>: Banco de Dados Relacionais
+* <b> Tipo de Sistemas </b>: Transacionais - OLTP
+* <b> Nível de Organização </b>: Operacional
+* <b> Tipo de Modelagem </b>: Normalizado
+* <b> Conceito Chave </b>: Entidade / Relacionamento
+* <b> Foco </b>: Armazenamento consistente, inserir, alterar e deletar dados
+* <b> Ao realizar consultas </b>: Baixo Desempenho
 
 #### Data Quality | Validação dos Dados ####
 Manter a qualidade e veracidade dos dados, garantino que estejam prontos para serem analisados corretamente.
