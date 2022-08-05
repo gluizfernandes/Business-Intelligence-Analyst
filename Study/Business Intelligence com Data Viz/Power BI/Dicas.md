@@ -13,3 +13,9 @@ Não é recomenando alterar o nome das colunas da base de dados, caso isso acont
 * Desabilitar Carga
   
 Quando desabilitams a carga no Power Query, as informações não serão carregadas para o PowerBI
+  
+* Estrutura da Modelagem de Tabelas
+
+  <b> Tabelas Fatos </b>: Na Esquerda
+  
+  <b> Tabela Dimensão </b>: Na Direita
