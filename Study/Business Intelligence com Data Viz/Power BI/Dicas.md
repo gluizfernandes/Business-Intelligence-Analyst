@@ -37,3 +37,9 @@ Sempre conferir se as métricas estão corretas na tabela, utilizando os filtros
 
 * <b> Encontrar KPis </b>
 <b>Google</b> tem diversos Exemplos de KPI do tema escolhido e podemos utilizar em nossos BI
+
+* <b> Percentual das Metas </b>
+% da meta é sempre o Real ÷ Planejado
+
+* <b> Métricas de Operações Básicas </b>
+Ideal é utilizar as Fórmulas DAX das <b> Operações Matemáticas </b> no lugar dos simbolos <b>(+ - * /)</b>
