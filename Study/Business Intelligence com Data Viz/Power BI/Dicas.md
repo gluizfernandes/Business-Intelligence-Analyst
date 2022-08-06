@@ -25,3 +25,15 @@ Quando desabilitams a carga no Power Query, as informações não serão carrega
   <b> Mesclar </b>: Acrescentar novas <b>colunas</b> de uma outra tabela
   
   <b> Tabela Dimensão </b>: Adicionar novas <b>linhas</b> em colunas já existentes.
+
+* <b> Inserir Dados Manuais </b>
+É possísvel criar um tabela manual e informar quais dados estarão nela pelo DAX/PowerBI, basta criar uma nova tabela e preencher.
+
+* <b> Utilizar Métricas em vez das Colunas </b>
+Mesmo se a métrica for básica, como um simples <b>SUM</b>, o ideal é criar uma medida pois deixa o desempenho melhor e a métrica fica dinâmica.
+
+* <b> Validação de Dados </b>
+Sempre conferir se as métricas estão corretas na tabela, utilizando os filtros.
+
+* <b> Encontrar KPis </b>
+<b>Google</b> tem diversos Exemplos de KPI do tema escolhido e podemos utilizar em nossos BI
