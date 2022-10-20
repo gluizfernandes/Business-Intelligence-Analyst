@@ -46,3 +46,6 @@ Ideal é utilizar as Fórmulas DAX das <b> Operações Matemáticas </b> no luga
 
 * <b> Remover Espaçamento dos Dados </b>
 Alguns dados possuem <b>espaço</b> incorreto antes ou depois de uma palavra, para remover basta apertar com o direito na coluna e <b>Cortar</b>
+
+* <b> Escolher Colunas </b>
+Ferramenta que tem a função de escolher quais colunas ficaram visiveis, <b>evitando que seja necessario excluir as colunas que não seram utilizadas.</b>
