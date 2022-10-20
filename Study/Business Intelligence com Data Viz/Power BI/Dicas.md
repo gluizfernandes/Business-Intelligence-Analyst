@@ -24,7 +24,7 @@ Quando desabilitams a carga no Power Query, as informações não serão carrega
 
   <b> Mesclar </b>: Acrescentar novas <b>colunas</b> de uma outra tabela
   
-  <b> Tabela Dimensão </b>: Adicionar novas <b>linhas</b> em colunas já existentes.
+  <b> Acrescentar Consulta </b>: Adicionar novas <b>linhas</b> em colunas já existentes.
 
 * <b> Inserir Dados Manuais </b>
 É possísvel criar um tabela manual e informar quais dados estarão nela pelo DAX/PowerBI, basta criar uma nova tabela e preencher.
