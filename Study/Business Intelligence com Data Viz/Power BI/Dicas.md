@@ -43,3 +43,6 @@ Sempre conferir se as métricas estão corretas na tabela, utilizando os filtros
 
 * <b> Métricas de Operações Básicas </b>
 Ideal é utilizar as Fórmulas DAX das <b> Operações Matemáticas </b> no lugar dos simbolos <b>(+ - * /)</b>
+
+* <b> Remover Espaçamento dos Dados </b>
+Alguns dados possuem <b>espaço</b> incorreto antes ou depois de uma palavra, para remover basta apertar com o direito na coluna e <b>Cortar</b>
