@@ -49,3 +49,8 @@ Alguns dados possuem <b>espaço</b> incorreto antes ou depois de uma palavra, pa
 
 * <b> Escolher Colunas </b>
 Ferramenta que tem a função de escolher quais colunas ficaram visiveis, <b>evitando que seja necessario excluir as colunas que não seram utilizadas.</b>
+
+* <b> Função Calculate </b>
+Os argumentos dos Filtros da Fórmula DAX CALCULATE só recebem <b>tabelas</b>
+
+ex: Função MAX retorna um <b>número</b>, então não pode ser utilizada no CALCULATE; já a função LASTDATE retorna uma <b>tabela</b>, então pode ser utilizada no CALCULATE
